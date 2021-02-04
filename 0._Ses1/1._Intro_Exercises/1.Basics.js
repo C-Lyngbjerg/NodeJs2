@@ -16,8 +16,8 @@ console.log("My first name is "+firstName+" and my last name is "+lastName)
 
 const year = "2020";
 const number = 1;
-const newyear = parseInt(year)+number;
-console.log(newyear)
+const newYear = parseInt(year)+number;
+console.log(newYear)
 // Add the year plus the number
 // The result should be 2021
 // You cannot touch line 1 or 2
