@@ -4,8 +4,9 @@
 // Exercise 1 - Retrieve value from object by key
 
 const myObj = {"message": "Hello, earthling! I bring peace."};
-const value = myObj.message;
+const value = myObj.message; 
 console.log(value);
+//   myObj.message = dot notation compared to square bracket notation myObj["message"] - dot notation preferred for nested values
 
 // Log the message 
 
@@ -22,7 +23,7 @@ console.log("My name is "+myNameAge.name+" and i am"+myNameAge.age+" years old")
 // Exercise 3 - Add a property 
 // const stackOverflow = {isAllowed: "true"};
 const stackOverflow = {};
-stackOverflow.isAllowed="true";
+stackOverflow.isAllowed = true;
 console.log(stackOverflow.isAllowed);
 // make a rule called isAllowed and let the value be true
 

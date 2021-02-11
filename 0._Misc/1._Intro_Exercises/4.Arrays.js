@@ -51,7 +51,8 @@ console.log(diet);
 
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.
 
-dinnerTray = diet;
+dinnerTray = diet.slice(); // needs to have slice otherwise references diet
+dinnerTrayTwo = [...diet] // spread operator breaks down the diet array and adds elements to dinnerTrayTwo - better to read
 console.log(dinnerTray);
 
 // --------------------------------------
