@@ -32,6 +32,16 @@ app.get("/time", (req, res) => {
     res.send(time);
 });
 
+
+// create a route called about that serves a hardcoded version number in a string
+const version = {version: "v0.1.2"}
+app.get("/about", (req, res) => {
+    res.send(version);
+})
+
+app.get("/page", (req, res) => {
+    res.send("<h1>Welcome</h1>");
+})
 // POST
 
 // DELETE
