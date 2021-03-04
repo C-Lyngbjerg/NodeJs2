@@ -1,0 +1,17 @@
+// What HTTP methods and in what order do we want to use?
+
+<collection>:anime_names
+|---------------------|
+| id | name | ranking |
+
+responds with all or a single respectively
+GET /anime_names
+GET /anime_names/<id>
+POST /anime_names
+PATCH /anime_names/<id>
+DELETE /anime_names/<id>
+
+PUT replaces the entire resource
+PATCH replaces part of the resource
+
+// SWAPI.dev - Star Wars API

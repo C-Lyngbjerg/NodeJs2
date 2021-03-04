@@ -5,6 +5,8 @@ app.use(express.json());
 // Code from class, saved for reference
 const emptyJSON = {};
 
+const port = 8080;
+const wine = require("./wine.json");
 
 app.get("/search", (req, res) => { 
     const query1 = req.query;
@@ -16,7 +18,7 @@ app.get("/telegram/:message/:name", (req, res) => {
     const nme = req.params.name;
     res.send({name: nme,message: msg});
 })
-app.listen(8080);
+
 
 // passing value with get 8080?<key>=<value>&<anotherKey>=<anotherValue>
 
@@ -27,6 +29,11 @@ let data = ["Hades", "Lupin", "Warhammer", "NodeJS"];
 app.get("/goodstuff", (req, res) => { 
     res.send({data});
 });
+
+app.get("/goodstuff/wine", (req, res) => {
+    res.send(wine);
+});
+
 // POST
 app.post("/goodstuff", (req, res) => {
     // const body = req.body
@@ -59,3 +66,19 @@ app.delete("/goodstuff/:value", (req, res) => {
         res.send(req.params.value + " couldnt be deleted");
     }
 });
+
+
+// express().listen(8080, () => {
+//     console.log('Listening on port: ', port);
+//  }).on('error', (e) => {
+//     console.log('Error happened: ', e.message)
+//  });
+
+app.listen(port, (error) => {
+    if (error){
+        console.log(error)
+    } else {
+        console.log("Server is running on port " + port);
+    }
+});
+

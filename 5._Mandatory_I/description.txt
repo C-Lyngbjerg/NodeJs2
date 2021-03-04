@@ -1,0 +1,35 @@
+Notes from Mandatory explanation
+
+Create a website that docs what we have learned in NodeJS
+- Mostly for our own use, to remind us for later use
+- No req for hosting - just do localhost
+
+Deadline and form
+- before March 21st 23:59
+- Fronter with zip or github with checkout 
+
+Requirements
+- Styling
+    - In segments not just one long html page
+    - can be different pages, dropdowns or whatever
+- Use JQuery or DOM for UX
+- No Webframeworks, but BootStrap is allowed
+    - Needs to have styling
+- Terminal commands
+    - nodemon app.js
+    - node app.js
+    - git commands
+- Code snippets in the explanation 
+    - just basic snippets, but some
+    - bonus if nice styling
+- All tools we've used and explain them
+- Theory we've touched upon
+    - call backs
+    - methods are first class citizens
+
+Bonus
+- research fx 
+    - difference between let and const
+    - garbage collection
+    - something new entirely 
+    - type coercion
