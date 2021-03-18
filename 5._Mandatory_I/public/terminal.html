@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/png;base64,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"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script     src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Terminal Commands</title>
+</head>
+<body class="bg-light">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar text-->
+        <div class="col">
+            <a class="navbar-brand" href="/">Home</a>
+            </a>
+        </div>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="objects">Objects and Variables</a>
+                <a class="nav-item nav-link" href="functions">Functions</a>
+                <a class="nav-item nav-link" href="express">Express</a>
+                <a class="nav-item nav-link" href="terminal">Terminal Commands</a>
+            </div>
+        </div>
+    </nav>
+    <p>""</p>
+    <p>""</p>
+    <div class="container">
+        <h1>Terminal Commands</h1>
+    
+        <div class="accordion" id="accordionExample">
+                
+            <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    git
+                </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>git is what we use as our Version Source Control. It is a language which is made to ensure that when several developers are 
+                    working on the same project there arent any problems.<br> there are a few main commands that we use from GIT:</p>
+                    <br>
+                    <ul>
+                        <li><p class="text-monospace">git add -A &lt;&/ File&gt;</p></li>
+                        <li><p class="text-monospace">git commit -m &lt;Commit Message&gt;</p></li>
+                        <li><p class="text-monospace">git push</p></li>
+                        <li><p class="text-monospace">git pull &lt;Named Repository &/ Branch&gt;</p></li>
+                        <li><p class="text-monospace">git init</p></li>
+                        <li><p class="text-monospace">git status</p></li>
+                        <li><p class="text-monospace">git clone &lt;URL&gt;</p></li>
+                    </ul>
+                    <br>
+                    <p>Most of these are pretty selfexplanatory, so i wont go in to much detail, but always remember to follow the correct 
+                        order eg. </p>
+                    <br>
+                    <ol>
+                        <li><p class="text-monospace">git add -A</p></li>
+                        <li><p class="text-monospace">git commit -m &lt;Commit Message&gt;</p></li>
+                        <li><p class="text-monospace">git push</p></li>
+                    </ol>
+                    <br>
+                    <p>Otherwise it's really easy to mess something up.</p>
+
+                    <p>A more comprehensive list of common git commands can be found <a href=http://guides.beanstalkapp.com/version-control/common-git-commands.html>here </a></p>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    npm
+                </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>npm stands for Node Package Manager. It is the way we install different packages in Node.JS such as Express, nodemon and Cross-Env. 
+                        It is also the way we run a lot of scripts and terminal commands. Whenever you clone a Node.JS application from github or the like, the first step is to run the 
+                        below command to make sure all dependencies are installed.
+                    </p>
+                    <br>
+                    <p class="text-monospace">npm install</p>
+                    <br>
+                    <p>Can also be written with <em>i</em> instead if you feel it's too much work to write out <em>install</em>.<br>
+                    The other command we use a lot is</p>
+                    <br>
+                    <p class="text-monospace">npm run start-dev</p>
+                    <br>
+                    <p>This command is made up of a <em>run</em> call from npm and the last part is the name/key of the script in <em>package.json</em> that we want to run.</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    nodemon
+                </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                <p>Nodemon is a tool that automatically detects changes in the code and restarts the application whenever there is a pause in the changes. It is installed with npm 
+                which is explained more in the above section. As with any terminal command it is important to <em>cd</em> into the correct directory before you start trying to run 
+                an app that the terminal cant access.</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Miscellaneous
+                    </button>
+                </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>There are a few other useful terminal commands that dont fit into the other categories. They are all fairly easy, but very useful for traversing 
+                        your machine through the terminal.<br>
+                        The first is <em>ls</em> which is used for listing the files and folders in the current working directory. Apropos the next is 
+                        <em>pwd</em> which prints the current working directory.</p>
+                        <p>Next we come to <em>cd &lt; .. / folder&gt;</em> which changes directory to one of the following: 
+                        <ul>
+                            <li>blank changes to home directory</li>
+                            <li> .. changes to one step further up</li>
+                            <li>&lt;folder&gt; changes to that folder - you can also specify a path with <em>cd folder/subfolder</em></li>
+                        </ul></p>
+                        <p>The final two commands i will <em>touch</em> on is how to create a file (just remember to write the filetype as well as the name <em>touch &lt;file.type&gt;</em>) and 
+                        <em>mkdir &lt;foldername&gt;</em> which will create a folder with the specified name in your current working directory.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

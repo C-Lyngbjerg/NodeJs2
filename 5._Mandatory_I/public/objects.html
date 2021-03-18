@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/png;base64,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"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script     src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Objects and Variables</title>
+</head>
+<body class="bg-light">
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar text-->
+        <div class="col">
+            <a class="navbar-brand" href="/">Home</a>
+            </a>
+        </div>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="objects">Objects and Variables</a>
+                <a class="nav-item nav-link" href="functions">Functions</a>
+                <a class="nav-item nav-link" href="express">Express</a>
+                <a class="nav-item nav-link" href="terminal">Terminal Commands</a>
+            </div>
+        </div>
+    </nav>
+    <p>""</p>
+    <p>""</p>
+    <div class="container">
+        <h1>Objects & Variables</h1>
+        <!-- <p class="text-monospace">Code Example</p> -->
+        <div class="accordion" id="accordionExample">
+                
+            <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Let & Const
+                </button>
+                </h5>
+            </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>In Node.JS we use <em>let</em> og <em>const</em> when we want to declare a variable. When we want to use a mutable variable we use <em>let</em> and when we want
+                        to use an 'immutable' variable we use <em>const</em>. there is also <em>var</em>, but i will touch on why we dont use <em>var</em> in the next section.</p>
+                        <p>Immutable was in quotes, because it is actually possible to fx change the value of a Const object
+                        even though we call it 'immutable'. An example can be seen below:</p>
+                        
+                        <br>
+                        <p class="text-monospace">const thisSong = {"description": "The best song in the world."};<br>delete thisSong.description;</p>
+                        <br>
+
+                        <p>This code would result in an empty <em>thisSong</em> object, even though it is 'immutable'. However something like the following 
+                        code would result in a compilation exception.</p>
+                        <br>
+                        <p class="text-monospace">const x = 1;<br>x = 2;</p>
+                        <!-- <p class="text-monospace">x = 2;</p> -->
+                        <br>
+                        
+                        <p>So as a simple variable <em>const</em> are actually immutable, but as objects the same doesnt quite apply</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Var
+                </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>Var is as mentioned above in the <em>let & const</em>-section not used anymore in JS development for the following reason: scope.
+                    Scope is, simply put, the 'area' of code in which a variable or function is accesible.</p>
+                    <p>So the difference between <em>var</em> compared to <em>let</em> and <em>const</em> is that <em>var</em> has 'function scope' 
+                    where <em>let</em> and <em>const</em> have 'block scope', which means that they are only accesible within a block of code for example
+                    between curly braces {...} in an if-statement. </p>
+                    <p>A <em>var</em> on the other hand has 'function scope', which means that it is accesible from the entirety of the scope of the function which it 
+                    is inside. This means that you have to be a lot more careful with your naming of variables and what you do with them, because you risk overwrting 
+                    an already declared variable or something similar.</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Arrays
+                </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>An Array is the basic datastructure we used the most in Node.JS. 
+                    To initialize an Array we use the following statement</p>
+                    <br>
+                        <p class="text-monospace">const newArr = [1, 2, 3]</p>
+                    <br>
+                    <p>Arrays are 0 based indexing as we are used to and to add to an array we use <em>.push</em> to add to the 
+                    end of the array most often or add by index. There are many more array methods that can be easily googled and many are familiar to someone who is used to Java.</p>
+                    <br>
+                    <h3>Methods</h3>
+                    <p>There are many more array methods than described below, but i will explain three of the most important and different from Java. The rest can be easily googled and should be familiar to someone who is used to Java.</p>
+                    
+                    <h5>.splice()</h5>
+                    <p>A very useful method which is <em>.splice</em> that can be used to insert, delete or replace by index. The method returns an array of deletions, which means that if no 
+                    deletions are made <em>.splice</em> returns an empty array</p>
+                    <br>
+                        <p class="text-monospace">newArr.splice(&lt;start&gt;, &lt;count of deletions&gt;, &lt;item 1&gt;, ... , &lt;item n&gt;);</p>
+                    <br>
+
+                    <h5>.filter()</h5>
+                    <p><em>.filter</em>is preferable to use over a for-each loop, because the latter just iterates over each element in an array
+                    while the former returns a new array and iterates through elements with a provided callback method. It uses the callback function to check if each <em>currentValue</em> equates 
+                    to true compared to the requirements of the function. If true it is added to the array that is eventually returned.</p>
+                    <br>
+                    <p class="text-monospace">const newerArr = newArr.filter(&lt;currentValue&gt; => &lt;requirements&gt;);</p>
+                    <br>
+
+                    <h5>.map() & spread</h5>
+                    <p> The last method i will explain is the <em>.map</em> which is similar to the previous, but instead of returning an array of the elements which pass the test, 
+                        this returns an array with the result of the callback function. This means that a function like</p>
+                    <br>
+                    <p class="text-monospace">const newerArr = newArr.map(&lt;currentValue&gt; => &lt;currentValue&gt; * 2);</p>
+                    <br>
+                    <p>Will return an array containing each element multiplied by two. This is very useful when you want to for example want change one or more element in an array. For example
+                    with the spread operator (...&lt;newArr&gt;). The spread operator works on either arrays or objects and it returns the array/object as each of it's elements or key:value pairs.
+                    If you use more than one spread operator and the objects have the same keys, the following spread will overwrite the previous making it very useful in a situation such a 
+                    <a href="/express">Patch</a> request, where you want to ensure that the client fx doesn't enter a destructive id value</p>
+                    <br>
+                    <p class="text-monospace">return {...animeName, ...req.body, id: animeName.id}</p>
+                    <br>
+                    <p>Here the first spread which is <em>animeName</em> will have it's values overwritten by the body of the patch request, but if there are missing key:value pairs
+                    then they just wont be replaced in <em>animeName</em>. This is better than just replacing the entirety with <em>req.body</em>, because then you would always have to 
+                    enter every other key:value as well as the one you were interested in changing. <br>The final thing that happens is <em>id: animeName.id</em> where we ensure that no matter
+                    what the id wont ever be changed clientside.</p>
+                    
+                    
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        JSON
+                    </button>
+                </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p> JSON stands for <em>JavaScript Object Notation</em> and is the way we in Node.JS write our objects.
+                        It is also used in <a href="/express">Express</a> in the <em>package.json</em> where we write our dependencies and 
+                        scripts and is also the datastructure used by our APIs.</p>
+                        <p>A JSON is always begun by {} and is made up of key:value pairs. For example in the package.json we write our 
+                            dependencies like this:
+                        </p>
+                        <br>
+                        <p class="text-monospace">{<br>
+                                "dependencies": {<br>
+                                        "express": "^4.17.1"}<br>}</p>
+                        <br>
+                        <p>Because a JSON object is made up of key:value pairs, we can call and manipulate them with calls like</p>
+                        <br>
+                        <p class="text-monospace">const JSONExample = {key: "value"};<br>JSONExample.key = otherValue;<br>
+                        JSONExample.newKey = newValue;</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Enviroment Variables
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                    <p>An enviroment variable can be many different things in an application, but the most important we've used is <em>process.env.PORT</em>, which is the port that our application is run on.
+                    We use this variable when we run the command <em>npm run start-dev</em>, which is an <a href="/terminal">npm command</a> which also uses the <em>cross-env</em> package.</p>
+                    <br>
+                    <p class="text-monospace">"start-dev": "cross-env PORT=3000 nodemon app.js"</p>
+                    <br>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

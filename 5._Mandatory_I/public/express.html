@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/png;base64,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"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Express</title>
+</head>
+<body class="bg-light">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar text-->
+        <div class="col">
+            <a class="navbar-brand" href="/">Home</a>
+            </a>
+        </div>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="objects">Objects and Variables</a>
+                <a class="nav-item nav-link" href="functions">Functions</a>
+                <a class="nav-item nav-link" href="express">Express</a>
+                <a class="nav-item nav-link" href="terminal">Terminal Commands</a>
+            </div>
+        </div>
+    </nav>
+    <p>""</p>
+    <p>""</p>
+    <div class="container">
+        <h1>Express</h1>
+        <div class="accordion" id="accordionExample">
+            
+            <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    What is It
+                </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>It is the way we create an API server in Node.js. It is similar to Spring from Java, but requires a lot less set up and 
+                        unlike Spring doesnt require things like Thymeleaf (as far as i know from the time of writing). It has various methods to serve 
+                        HTTP requests and serving html files in response to the requests.
+                    </p>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Setup
+                </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <!-- Package.JSON, NPM install -->
+                    <p>When you want to set up a node application with Express. The first thing we do is create <a href="/objects"><em>package.json</em> </a>
+                        where we write the key:value pair</p>
+                    
+                    <br>
+                    <p class="text-monospace">{"dependencies": {"express":&lt;version&gt;}}</p>
+                    <br>
+
+                    <p>After which we run <a href="/terminal">npm install</a> which installs all our specified dependencies - in this case only 
+                    Express, but we would probably also use Cross-Env. After npm has finished we can see a new file called <em>package-lock.json</em>
+                    and a folder named <em>node_modules</em> which together holds all we need to create our Data API server. The last step i will describe in this segment is 
+                    importing express and using it in <em>app.js</em>.</p>
+
+                    <br>
+                    <p class="text-monospace">const express = require("express");<br>
+                        const app = express();<br>
+                        app.use(express.json());</p>
+                    <br>
+                    <p>These three lines we put in the top of our new <em>app.js</em> file. The first is a statement to import express, the second is to start using it
+                    and the third is so we can serve <em>.json</em> files as responses to the HTTP requests.</p>
+                    <p>Methods such as <em>app.listen()</em> and <em>app.get()</em> will be explained in the following segments.</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        HTTP and Express Methods
+                    </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>GET, app.listen etc</p>
+                        <h5>HTTP Requests</h5>
+                        <p>HTTP stands for <em>Hyper Text Transfer Protocol</em>. It is what we use send data from our API. There is a order to 
+                        to which we set up our Express methods for these HTTP requests: GET, which is where our server responds with all resources
+                        or if by a specific criteria eg. id, our server responds with a resource that corresponds with that criteria. <br>The next is 
+                        POST, which is where the client creates a new resource in our server - here we usually use Postman or a form on a HTML page.<br>
+                        PUT/PATCH is used for updating all or one specific resource respectively - It is a good idea to look at our <a href="/objects">array methods</a> to easily find and 
+                        update the specific resource. Here again the usage is the same as with POST.
+                        <br>The last is DELETE, which is used for deleting a specific resource. We will almost always use DELETE with a specified criteria eg id, because
+                        we dont want to delete our whole database.</p>
+                        <br>
+                        <h5>Express Methods</h5>
+                        <p>These following methods are how we connect the HTTP requests with our application and how we make sure our application runs.</p>
+                        <h6>app.get()</h6>
+                        <p>As mentioned above these <em>app.&lt;request&gt;</em> methods are how we connect our server to HTTP requests. Below is my 
+                        example method which is this projects get method for the index page. The first line is the function declaration with two parameters.
+                        The first is the URL enclosed by quotation marks and the second being an <a href="functions">arrow function</a> which in turn takes 
+                        <em>req</em> and <em>res</em> objects as parameters. Inside the arrow function we create a variable which contains the name our .html page for our
+                        index page and then the <em>res</em> object is used to send the path to the file as a response combined with our variable which contains the path 
+                        to the <em>public</em> folder</p>
+                        <br>
+                        <p class="text-monospace">
+                            app.get("/", (req, res) => {<br>
+                            const filename = "/index.html"<br>
+                            res.sendFile(pubDir +filename);<br>
+                        });</p>
+                        <br>
+                        <h6>app.listen</h6>
+                        <p>This method is always - by convention rather than function - written at the bottom of the <em>app.js</em> file.
+                        The method is used to make sure that our application is continuesly listening on the specified
+                        </p>
+                        <br>
+                        <p class="text-monospace">
+                            app.listen(port, (error) => {<br>
+                                if (error) {<br>
+                                    console.log("Couldn't run server: ${​​error}");<br>
+                                } else {<br>
+                                    console.log("Server is running on port", port);<br>
+                                }});</p>
+                        <br>
+                        <p>This method - like the request methods above contains two parameters, the first being an optional error and the 
+                            second an arrow function with an if/else statement that either prints the error or prints which port the 
+                        server is now running on.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Endpoints
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>An endpoint is where an html page or some API service is exposed to users. For this project the endpoints would be "/", "/express" etc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Redirecting
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>Redirecting is when we, instead of just sending the user to the html page or sending back another requested resource
+                            our server responds to the query by immediately, or at a set time, Redirecting the user to another resource by using 
+                            the <em>res.redirect</em> instead of .send as usual to move the user from the current resource to the specified one.</p>
+                            <br>
+                            <p class="text-monospace">res.redirect("/");</p>
+                            <br>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

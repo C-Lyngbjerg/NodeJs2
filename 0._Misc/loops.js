@@ -9,3 +9,6 @@ console.log(failures2);
 
 
 
+// using filter is preferable to for each and find because foreach
+// iterates through the elements while filter returns a new array
+// find is not able to do it in one line like filter

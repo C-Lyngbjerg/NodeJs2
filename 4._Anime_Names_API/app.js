@@ -1,6 +1,7 @@
 // implementing express
 const express = require("express");
 const app = express();
+app.use(express.json());
 
 const port = 8080;
 const animeNames = [
@@ -15,6 +16,7 @@ const animeNames = [
         protagonist: "Saitama"
     }
 ];
+let AUTOINCREMENT = animeNames.length;
 
 // GET
 app.get("/anime_names", (req, res) =>{
@@ -28,10 +30,29 @@ app.get("/anime_names/:id", (req, res) => {
 });
 
 // POST
+app.post("/anime_names", (req, res) => {
+    const newAnimeName = req.body;
+    newAnimeName.id = ++AUTOINCREMENT;
+    animeNames.push(newAnimeName);
+    res.send({ data: newAnimeName });
+});
 
-// PUT
+
+// PATCH
+app.patch("/anime_names/:id", (req, res) => {
+    animeNames = animeNames.map(animeName => {
+        if (animeName.id === Number(req.params.id)){
+            return {...animeName, ...req.body, id: animeName.id};
+        }
+        return animeName;
+    });
+});
 
 // DELETE
+app.delete("/anime_names/:id", (req,res) => {
+    animeNames = animeNames.filter(animeName => animeName.id !== Number(req.params.id));
+    res.send({ });
+});
 
 
 
