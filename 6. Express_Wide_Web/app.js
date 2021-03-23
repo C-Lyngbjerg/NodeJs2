@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
+app.use(express.static('public'))
 
 const port = process.env.PORT || 8080;
 const pubDir = __dirname+"/public";
@@ -8,7 +9,7 @@ const pubDir = __dirname+"/public";
 
 
 app.get("/", (req, res) => {
-    const filename = "/welcome.html"
+    const filename = "/welcome/welcome.html"
     res.sendFile(pubDir +filename);
 });
 
@@ -27,11 +28,21 @@ app.get("/pub", (req, res) => {
     if (Number(req.query.money) > 500)  {
         res.redirect("/whiskey");
     } else {
-        res.send({ doorman: "you poor"})
+        res.send({ doorman: "you poor"});
     }
     res.sendFile(pubDir +filename);
     // res.send({ topping: "cheese", name: "Margerita" });
 });
+
+app.get("/candle", (req, res) => {
+    if(req.query.blow === "blow"){
+        res.send({ lightsOn: "false"});
+    }else {
+        res.send({ lightsOn: "true"});
+    }
+});
+// if you didnt use if/else and just if - l40 would try to set header again after 
+// you already sent in l38
 
 app.listen(port, (error) => {
     if (error) {

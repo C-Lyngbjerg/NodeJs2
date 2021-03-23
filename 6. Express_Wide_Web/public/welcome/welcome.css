@@ -1,0 +1,10 @@
+body {
+    background-color: paleturquoise;
+}
+
+.pizza-space {
+    width: 100%; /*can also use vw ViewWidth i think? */
+    height: 200px;
+    background-color: gray;
+    border: solid;
+}

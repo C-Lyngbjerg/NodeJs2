@@ -80,7 +80,20 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                    always use === (!==)
+                    <!-- always use === (!==) -->
+                    <h6>Loops</h6>
+                    <p>In JavaScript for- and foreach loops function basically as we know them from Java. The part that are important to remember is that we are encouraged to switch to 
+                        functional loop methods such as described in <a href="/objects">the Arrays segment</a>. Among them are the .filter and .map methods which is described in the 
+                        previous link.</p>
+                    <p>One of the reasons we use these methods rather than the ones we have been taught in Java is what is called <em>the Functional Approach</em>, which i wont try to 
+                    explain the theory behind here, but it is worth looking into. Another reason is that compared to for loops, these functional loops are shorter to write, less imperative, 
+                    and a lot more general (and therefore more reusable). </p>
+                    <br>
+                    <h6>If Statements</h6>
+                    <p>Honestly not really different from Java, so not much to say other than it is really important to use <em>===</em> rather than two, because in JavaScript with <em>==</em> 
+                    JS will enforce type coercion which means that JS tries to convert either variable to match the others type. This can have a lot of unforseen consequences, so it is better to use 
+                    the strict <em>===</em> to avoid any weird interactions.
+                    </p>
                 </div>
             </div>
             </div>
@@ -95,7 +108,18 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
-                    member First Class Citizens
+                    <!-- member First Class Citizens -->
+                    <p>A Callback Function is when we pass a function as an argument in another function. This is possible in JS because functions are first-class citizens, which is 
+                        really useful.
+                    </p>
+                    <br>
+                        <p class="text-monospace">function callbackThis(anyFunctionReference){<br>
+                            anyFunctionReference();<br>
+                        }</p>
+                    <br>
+                    <p>Here the callback function will run when it is called inside the other function. If the function is written with parantheses when written as an argument, it will
+                        run immediatly instead of when called.
+                    </p>
                 </div>
             </div>
             </div>
@@ -110,7 +134,17 @@
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                 <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <p>An arrow function is similar to the above callback functions except it is run immediatly and is not a reference to another function but rather a new anonymous function.
+                    </p>
+                    <br>
+                        <p class="text-monospace">app.get("/functions", (req, res) => {<br>
+                            const filename = "/functions.html"<br>
+                            res.sendFile(pubDir +filename);<br>
+                        });</p>
+                    <br>
+                    <p>In the code example above (which is the get method for this html page) we can see that the <em>app.get()</em> function has two arguments: the url which is requested and 
+                    an arrow function which has two arguments: <em>req</em> & <em>res</em>. After the arguments we have the eponymous arrow followed by the function body.
+                </p>
                 </div>
                 </div>
             </div>

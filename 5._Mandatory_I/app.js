@@ -1,15 +1,17 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
+app.use(express.static('public'))
 
 const port = process.env.PORT || 8080;
 const pubDir = __dirname+"/public";
 
 // GET
 app.get("/", (req, res) => {
-    const filename = "/index.html"
+    const filename = "/index/index.html"
     res.sendFile(pubDir +filename);
 });
+
 app.get("/functions", (req, res) => {
     const filename = "/functions.html"
     res.sendFile(pubDir +filename);
