@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-app.use(express.static('public'))
+app.use(express.static('public'));
+const fetch = require('node-fetch');
+fs = require('fs');
+
 
 const port = process.env.PORT || 8080;
 const pubDir = __dirname+"/public";
@@ -10,6 +13,11 @@ const pubDir = __dirname+"/public";
 
 app.get("/", (req, res) => {
     const filename = "/welcome/welcome.html"
+    res.sendFile(pubDir +filename);
+});
+
+app.get("/catfacts", (req, res) => {
+    const filename = "/catfacts.html"
     res.sendFile(pubDir +filename);
 });
 
@@ -40,6 +48,18 @@ app.get("/candle", (req, res) => {
     }else {
         res.send({ lightsOn: "true"});
     }
+});
+
+app.get("/proxy", (req, res) => {
+    const filename = "/proxy.html";
+    fetch("https://google.dk")
+        .then(response => response.text())
+        .then(text => {
+            fs.writeFile(pubDir + filename, text, function (err) {
+                if (err) return console.log(err);
+        })
+    });
+    res.sendFile(pubDir +filename);
 });
 // if you didnt use if/else and just if - l40 would try to set header again after 
 // you already sent in l38
