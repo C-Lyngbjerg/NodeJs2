@@ -8,6 +8,7 @@ fs = require('fs');
 
 const port = process.env.PORT || 8080;
 const pubDir = __dirname+"/public";
+
 // most express pure html projects use public for html folder, not a hard rule though
 
 
@@ -53,13 +54,8 @@ app.get("/candle", (req, res) => {
 app.get("/proxy", (req, res) => {
     const filename = "/proxy.html";
     fetch("https://google.dk")
-        .then(response => response.text())
-        .then(text => {
-            fs.writeFile(pubDir + filename, text, function (err) {
-                if (err) return console.log(err);
-        })
-    });
-    res.sendFile(pubDir +filename);
+    .then(response => response.textConverted())
+    .then(body => res.send(body))
 });
 // if you didnt use if/else and just if - l40 would try to set header again after 
 // you already sent in l38
