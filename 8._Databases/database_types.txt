@@ -1,0 +1,53 @@
+ACID vs base
+Atomicity Consistency Isolation Durability
+
+Types of Databases:
+-------------------------------
+Relational Databases
+-------------------------------
+MySQL
+PostgreSQL
+MariaDB - Anders kan godt lide den her
+SQLite - Very light and only has one file - very practical
+MsSQL
+Oracle / MySQL Enterprise
+
+
+-------------------------------
+In-Memory
+-------------------------------
+H2
+
+
+
+-------------------------------
+NoSQL
+-------------------------------
+
+
+
+-------------------------------
+Document
+-------------------------------
+Firebase
+MongoDB
+Raven
+
+
+-------------------------------
+Object
+-------------------------------
+Realm - just saves the objects and reads the objects
+
+
+-------------------------------
+Graph
+-------------------------------
+Neo4J
+
+
+-------------------------------
+Key-Value
+-------------------------------
+Cache-Databases
+Redis
