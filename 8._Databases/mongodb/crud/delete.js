@@ -19,7 +19,6 @@ MongoClient.connect(url,{ useUnifiedTopology: true }, (error, client) => {
         }
         console.log(data);
     });
-
     
     brands.deleteOne(query, (err, res) => {
         if (err) throw err;
