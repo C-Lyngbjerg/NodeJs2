@@ -11,11 +11,13 @@ app.use(express.urlencoded({ extended: true }));
 const projectsRouter = require("./routes/projects.js");
 const contactsRouter = require("./routes/contacts.js");
 const skillsRouter = require("./routes/skills.js");
+const educationRouter = require("./routes/educations.js");
 
 // Making sure the app uses the routers
 app.use(projectsRouter.router);
 app.use(contactsRouter.router);
 app.use(skillsRouter.router);
+app.use(educationRouter.router);
 
 // Setting the ports and path to public folder
 const port = process.env.PORT || 8080;
@@ -29,10 +31,11 @@ const frontpage = fs.readFileSync(pubDir+"/frontpage/frontpage.html", "utf-8");
 const projects = fs.readFileSync(pubDir+"/projects/projects.html", "utf-8");
 const contacts = fs.readFileSync(pubDir+"/contacts/contacts.html", "utf-8");
 const skills = fs.readFileSync(pubDir+"/skills/skills.html", "utf-8");
+const education = fs.readFileSync(pubDir+"/education/education.html", "utf-8");
 
 /*
-GET request methods for frontpage, projects, contacts and skills
-in that order. 
+GET request methods for frontpage, projects, contacts, skills,
+education and recommendations in that order. 
 Each method their respective pages as an concatenated string with
 header and footer on either side of the actual page.
 */
@@ -54,6 +57,9 @@ app.get("/skills", (req, res) => {
     res.send(header+skills+footer);
 });
 
+app.get("/education", (req, res) => {
+    res.send(header+education+footer);
+});
 
 // .listen makes sure that the app runs continually rather than just once.
 app.listen(port, (error) => {
@@ -67,9 +73,6 @@ app.listen(port, (error) => {
 /*
 TODO:
 - Pages
-    - Contacts
-        - Information
-    - Education
     - Recommendations
 - Styling
     - Bootstrap

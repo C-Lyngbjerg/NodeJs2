@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello purple, blue stuff</h1>
+    <input type="color" id="color-picker">
+    <button onclick="sendColor()">Send Color</button>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        function sendColor() {
+            const color = document.getElementById("color-picker").value;
+            console.log("The color is: ", color);
+
+            socket.emit("colorChanged", { color });
+            socket.on("changeBackgroundToThisColor", (data) => {
+                console.log(data);
+                document.body.style.backgroundColor = data.color;
+            });
+        }
+        // emit = speak
+        // on = listen
+    </script>
+</body>
+</html>
