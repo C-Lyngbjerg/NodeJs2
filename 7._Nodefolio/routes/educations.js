@@ -5,7 +5,7 @@ const education = [
     {
         title: "Datamatiker", 
         type: "Erhvervsakademiuddannelse på KEA",
-        years: "2019-2021",
+        years: "2019-2022",
         description: "Videregående uddannelse i software udvikling"
     },
     {

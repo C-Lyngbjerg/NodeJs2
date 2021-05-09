@@ -5,14 +5,12 @@
         const skillsDiv = $("#skills");
         
         result.skills.map( skill => {
-            const newSkill = $('<div></div>');
+            const newSkill = $('<li class="list-group-item"></li>');
             console.log(skill);
 
             newSkill.append($('<h1></h1>').text(skill.title));
-            newSkill.append($('<p></p>').text(skill.explanation));
-            newSkill.append($('<label for="progress">Progress: </label>'));
-            newSkill.append($(`<meter id="progress" value=${skill.progress} min="0" max="1">${skill.progress}%</meter>`));//.value(skill.progress));
-
+            newSkill.append($('<p></p>').text(skill.explanation));            
+            newSkill.append($(`<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: ${skill.progress}%" aria-valuenow=${skill.progress} aria-valuemin="0" aria-valuemax="100"></div></div>`));
             skillsDiv.append(newSkill);
         });
         

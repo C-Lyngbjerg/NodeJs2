@@ -5,7 +5,7 @@
         const educationsDiv = $("#education");
         
         result.education.map( education => {
-            const newEducation = $('<div></div>');
+            const newEducation = $('<li class="list-group-item"></li>');
             console.log(education);
 
             newEducation.append($('<h1></h1>').text(education.title));

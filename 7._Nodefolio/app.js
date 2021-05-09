@@ -12,12 +12,15 @@ const projectsRouter = require("./routes/projects.js");
 const contactsRouter = require("./routes/contacts.js");
 const skillsRouter = require("./routes/skills.js");
 const educationRouter = require("./routes/educations.js");
+const recommendationRouter = require("./routes/recommendations.js");
 
 // Making sure the app uses the routers
 app.use(projectsRouter.router);
 app.use(contactsRouter.router);
 app.use(skillsRouter.router);
 app.use(educationRouter.router);
+app.use(recommendationRouter.router);
+
 
 // Setting the ports and path to public folder
 const port = process.env.PORT || 8080;
@@ -32,6 +35,7 @@ const projects = fs.readFileSync(pubDir+"/projects/projects.html", "utf-8");
 const contacts = fs.readFileSync(pubDir+"/contacts/contacts.html", "utf-8");
 const skills = fs.readFileSync(pubDir+"/skills/skills.html", "utf-8");
 const education = fs.readFileSync(pubDir+"/education/education.html", "utf-8");
+const recommendations = fs.readFileSync(pubDir+"/recommendations/recommendations.html", "utf-8");
 
 /*
 GET request methods for frontpage, projects, contacts, skills,
@@ -61,6 +65,10 @@ app.get("/education", (req, res) => {
     res.send(header+education+footer);
 });
 
+app.get("/recommendations", (req, res) => {
+    res.send(header+recommendations+footer);
+});
+
 // .listen makes sure that the app runs continually rather than just once.
 app.listen(port, (error) => {
     if (error) {
@@ -69,11 +77,3 @@ app.listen(port, (error) => {
         console.log("Server is running on port:", Number(port));
     }
 });
-
-/*
-TODO:
-- Pages
-    - Recommendations
-- Styling
-    - Bootstrap
-*/

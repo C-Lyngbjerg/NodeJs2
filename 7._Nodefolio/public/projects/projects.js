@@ -5,14 +5,14 @@
         const projectsDiv = $("#projects");
         
         result.projects.map( project => {
-            const newProject = $('<div></div>');
-            console.log(project);
+            const newProject = $('<li class="list-group-item"></li>');
 
-            newProject.append($('<h1></h1>').text(project.title));
+            newProject.append($('<h2></h2>').text(project.title));
             newProject.append($('<p></p>').text(project.description));
             newProject.append($('<p></p>').text(project.startDate + " - " + project.endDate));
             newProject.append($('<a></a>').text(project.gitLink));
-
+            newProject.append($('<p></p>'));
+            
             projectsDiv.append(newProject);
         });
         

@@ -1,32 +1,59 @@
 
-    <h1>Look at all those contacts</h1>
-    <div>
-        <p>Email</p>
-        <p>Phone Number</p>
-        <p>SoMe</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" id="obj">
+                <div class="row">
+                    <div class="col-sm" id="obj">
+                        <div class="row">
+                            <h1>Contact Information</h1>
+                            <h3>Contact me on any of the following:</h3>
+                        </div>
+                        <div class="row">
+                            <p>C.lyngbjerg@gmail.com</p>
+                        </div>
+                        <div class="row">
+                            <p>+45 60110716</p>
+                        </div>
+                        <div class="row">
+                            <p>@CLyngbjerg on Twitter for Warhammer.</p>
+                            <p>@CLyngbjerg on Instagram for sunsets and nothing else really</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-6" id="obj">
+                <div class="row">
+                    <form method="POST" action = "/api/contact"> 
+                        <div class="col-lg" id="obj">
+                            <div class="row">
+                                <input name= "name" placeholder="Name">
+                            </div>
+                            <div class="row">
+                                <input name= "email" placeholder="Email">   
+                            </div>
+                            <div class="row">
+                                <input name= "subject" placeholder="Subject">
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg" id="obj">
+                            <div class="row">
+                                <textarea name= "message" placeholder="Message" rows="10" cols="50"></textarea>
+                            </div>
+                            <div class="row">
+                                <button type="submit" class="btn btn-light">Contact Me</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    
     </div>
-    <br><br>
-    <!-- todo add method later -->
-    <form method="POST" action = "/api/contact"> 
-        <label>Name</label>
-        <input name= "name" placeholder="Name">
-
-        <label>Email</label>
-        <input name= "email" placeholder="Email">
-
-        <label>Subject</label>
-        <input name= "subject" placeholder="Subject">
-
-        <label>Message</label>
-        <textarea name= "message" placeholder="Message" rows="10" cols="50"></textarea>
-
-        <button type="submit">Contact Me</button>
-    </form>
-
     <script>
-        // get formdata
-        // send it with fetch
-
         fetch("/api/contacts", {
             method: "POST",
             body: JSON.stringify({ //formData
@@ -37,8 +64,6 @@
             })
         }).then((res) => res.JSON())
         .then((res) => {
-            // show the user the success message
-            // client side redirect
             console.log('here is the response: ', res);
         })
         .catch((err) => {

@@ -11,7 +11,7 @@ router.post("/api/contact", (req, res, next) => {
     }) 
     const mailOptions = {
         from: `${req.body.email}`,
-        to: 'nodetesterjs@gmail.com',
+        to: 'c.lyngbjerg@gmail.com',
         subject: `${req.body.name}`,
         text: `${req.body.message}`,
         replyTo: `${req.body.email}`
@@ -24,19 +24,9 @@ router.post("/api/contact", (req, res, next) => {
           console.log('here is the res: ', res)
         }
     })
-
+    res.redirect("/")
 });
 
 module.exports = {
     router
 }
-
-
-
-/*
-const message = req.body;
-    console.log(message);
-    // todo send email
-    const reply = 'thank you,'+message.name+' for the message';
-    res.send({body:reply})
-*/

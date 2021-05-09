@@ -34,56 +34,56 @@
         <div class="accordion" id="accordionExample">
             
             <div class="card">
-            <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    What is It
-                </button>
-                </h5>
-            </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <p>It is the way we create an API server in Node.js. It is similar to Spring from Java, but requires a lot less set up and 
-                        unlike Spring doesnt require things like Thymeleaf (as far as i know from the time of writing). It has various methods to serve 
-                        HTTP requests and serving html files in response to the requests.
-                    </p>
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is It
+                    </button>
+                    </h5>
                 </div>
-            </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>It is the way we create an API server in Node.js. It is similar to Spring from Java, but requires a lot less set up and 
+                            unlike Spring doesnt require things like Thymeleaf (as far as i know from the time of writing). It has various methods to serve 
+                            HTTP requests and serving html files in response to the requests.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Setup
-                </button>
-                </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <!-- Package.JSON, NPM install -->
-                    <p>When you want to set up a node application with Express. The first thing we do is create <a href="/objects"><em>package.json</em> </a>
-                        where we write the key:value pair</p>
-                    
-                    <br>
-                    <p class="text-monospace">{"dependencies": {"express":&lt;version&gt;}}</p>
-                    <br>
-
-                    <p>After which we run <a href="/terminal">npm install</a> which installs all our specified dependencies - in this case only 
-                    Express, but we would probably also use Cross-Env. After npm has finished we can see a new file called <em>package-lock.json</em>
-                    and a folder named <em>node_modules</em> which together holds all we need to create our Data API server. The last step i will describe in this segment is 
-                    importing express and using it in <em>app.js</em>.</p>
-
-                    <br>
-                    <p class="text-monospace">const express = require("express");<br>
-                        const app = express();<br>
-                        app.use(express.json());</p>
-                    <br>
-                    <p>These three lines we put in the top of our new <em>app.js</em> file. The first is a statement to import express, the second is to start using it
-                    and the third is so we can serve <em>.json</em> files as responses to the HTTP requests.</p>
-                    <p>Methods such as <em>app.listen()</em> and <em>app.get()</em> will be explained in the following segments.</p>
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Setup
+                    </button>
+                    </h5>
                 </div>
-            </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <!-- Package.JSON, NPM install -->
+                        <p>When you want to set up a node application with Express. The first thing we do is create <a href="/objects"><em>package.json</em> </a>
+                            where we write the key:value pair</p>
+                        
+                        <br>
+                        <p class="text-monospace">{"dependencies": {"express":&lt;version&gt;}}</p>
+                        <br>
+
+                        <p>After which we run <a href="/terminal">npm install</a> which installs all our specified dependencies - in this case only 
+                        Express, but we would probably also use Cross-Env. After npm has finished we can see a new file called <em>package-lock.json</em>
+                        and a folder named <em>node_modules</em> which together holds all we need to create our Data API server. The last step i will describe in this segment is 
+                        importing express and using it in <em>app.js</em>.</p>
+
+                        <br>
+                        <p class="text-monospace">const express = require("express");<br>
+                            const app = express();<br>
+                            app.use(express.json());</p>
+                        <br>
+                        <p>These three lines we put in the top of our new <em>app.js</em> file. The first is a statement to import express, the second is to start using it
+                        and the third is so we can serve <em>.json</em> files as responses to the HTTP requests.</p>
+                        <p>Methods such as <em>app.listen()</em> and <em>app.get()</em> will be explained in the following segments.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="card">
